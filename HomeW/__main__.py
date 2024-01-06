@@ -1,4 +1,4 @@
-from Bot import Bot
+from HomeW.Bot import Bot
 
 
 if __name__ == "__main__":
