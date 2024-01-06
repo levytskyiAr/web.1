@@ -1,4 +1,4 @@
-from HomeW.AddressBook import *
+from AddressBook import *
 
 
 class Bot:
