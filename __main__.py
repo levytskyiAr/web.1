@@ -1,24 +1,26 @@
-from Bot import Bot
-
+from Bot import *
 
 if __name__ == "__main__":
+    choice = {
+        'add': AddBot(),
+        'search': SearchBot(),
+        'view': ViewBot(),
+        'edit': EditBot(),
+        'load': LoadBot(),
+        'congratulate': CongratulateBot(),
+        'delete': RemoveBot(),
+        'exit': ExitBot(),
+        'save': SaveBot(),
+        'help': Help()
+    }
+
+
     print('Hello. I am your contact-assistant. What should I do with your contacts?')
-    bot = Bot()
-    bot.book.load("auto_save")
-    commands = ['Add', 'Search', 'Edit', 'Load', 'Remove', 'Save', 'Congratulate', 'View', 'Exit']
+
     while True:
-        action = input('Type help for list of commands or enter your command\n').strip().lower()
-        if action == 'help':
-            format_str = str('{:%s%d}' % ('^',20))
-            for command in commands:
-                print(format_str.format(command))
-            action = input().strip().lower()
-            bot.handle(action)
-            if action in ['add', 'remove', 'edit']:
-                bot.book.save("auto_save")
+        action = input('Enter your command: ')
+        if action in choice:
+            choice[action].handle()
         else:
-            bot.handle(action)
-            if action in ['add', 'remove', 'edit']:
-                bot.book.save("auto_save")
-        if action == 'exit':
-            break
+            print("Incorrect command!")
+            
