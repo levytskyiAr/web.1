@@ -15,7 +15,7 @@ if __name__ == "__main__":
     }
 
 
-    print('Hello. I am your contact-assistant. What should I do with your contacts?')
+    print('Hello. I am your contact-assistant. What should I do with your contacts? <type "help" to see commands> ')
 
     while True:
         action = input('Enter your command: ')

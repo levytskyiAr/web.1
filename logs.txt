@@ -61,3 +61,4 @@
 [19:50:06] Addressbook has been saved!
 [20:00:22] Addressbook has been loaded!
 [23:34:28] Contact Artur has been added.
+[15:17:09] Contact + has been added.
